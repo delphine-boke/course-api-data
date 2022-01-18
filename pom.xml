@@ -12,10 +12,12 @@
 	<artifactId>course-api-data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>course-api-data</name>
-	<description>understanding spring boot quickstart</description>
+	<description>understanding spring boot quickstart data JPA</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
