@@ -1,49 +1,48 @@
 package com.delphine.springbootquickstart.courseapidata.controller;
 
 
-import com.delphine.springbootquickstart.courseapidata.model.Topic;
-import com.delphine.springbootquickstart.courseapidata.service.TopicService;
+import com.delphine.springbootquickstart.courseapidata.model.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-public class TopicController {
+public class CourseController {
 
     @Autowired    //means needs dependency injection
-    private TopicService topicService;
+    private CourseService courseService;
 
-    @RequestMapping("/topics")
-    public List<Topic> getAllTopics(){
+    @RequestMapping("/Courses")
+    public List<Course> getAllCourses(){
 
-        return topicService.getAllTopics();
+        return CourseService.getAllCourses();
     }
 
-    //get topic by id
-    @RequestMapping("/topics/{id}")
-    public  Topic getTopic(@PathVariable String id){ //id is available in the path
+    //get Course by id
+    @RequestMapping("/Courses/{id}")
+    public  Course getCourse(@PathVariable String id){ //id is available in the path
 
-        return topicService.getTopic(id);
+        return CourseService.getCourse(id);
     }
 
-    //create a new topic
-    @RequestMapping(method = RequestMethod.POST, value = "/topics")
-    public void addTopic(@RequestBody Topic topic){
+    //create a new Course
+    @RequestMapping(method = RequestMethod.POST, value = "/Courses")
+    public void addCourse(@RequestBody Course Course){
 
-        topicService.addTopic(topic);
+        CourseService.addCourse(Course);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
-    public void updateTopic(@RequestBody Topic topic, @PathVariable String id){
+    @RequestMapping(method = RequestMethod.PUT, value = "/Courses/{id}")
+    public void updateCourse(@RequestBody Course Course, @PathVariable String id){
 
-        topicService.updateTopic(id, topic);
+        CourseService.updateCourse(id, Course);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
-    public void deleteTopic(@PathVariable String id){
+    @RequestMapping(method = RequestMethod.DELETE, value = "/Courses/{id}")
+    public void deleteCourse(@PathVariable String id){
 
-        topicService.deleteTopic(id);
+        CourseService.deleteCourse(id);
     }
 
 }
