@@ -18,11 +18,11 @@ public class TopicService {
     //create a mutable list
     //private List<Topic> topics = Arrays.asList(
     //Arrays.asList creates a new non-mutable list
-    private List<Topic> topics = new ArrayList<>(Arrays.asList(
-                    new Topic("spring", "Spring Framework", "Spring Framework Description"),
-                    new Topic("java", "Core Java", "Java Core Description"),
-                    new Topic("javascript", "Javascript", "Javascript Description")
-                    ));
+//    private List<Topic> topics = new ArrayList<>(Arrays.asList(
+//                    new Topic("spring", "Spring Framework", "Spring Framework Description"),
+//                    new Topic("java", "Core Java", "Java Core Description"),
+//                    new Topic("javascript", "Javascript", "Javascript Description")
+//                    ));
 
     public List<Topic> getAllTopics (){
         //return topics replacement
