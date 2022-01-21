@@ -1,7 +1,14 @@
 package com.delphine.springbootquickstart.courseapidata.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity //create a table with id,name, description as columns
+//these texts
+//convert a topic instance to a row in the table and vice versa
 public class Topic {
 
+    @Id //choose Id as your primary key
     private String id;
     private String name;
     private String description;
